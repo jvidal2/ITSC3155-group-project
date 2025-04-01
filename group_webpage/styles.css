@@ -1,0 +1,156 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header section styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Styling for team logo image */
+.team-logo {
+    width: 150px; /* Adjust the size as needed */
+    margin-top: 10px;
+}
+
+/* Menu button styling */
+header nav {
+    margin-top: 10px;
+}
+
+header nav button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+header nav button:hover {
+    background: #0056b3;
+}
+
+/* Flex container for team bios and vision sections */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Card styling for individual team bios */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 40px);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+/* Initially hide bio details */
+.bio {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Button styling */
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.bio-avatar {
+    width: 200px;
+    height: auto;
+}
+
+.moodboard {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.moodboard h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.board-img {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.board-img img {
+    width: 125px;
+    height: 125px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.jazmin-card {
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+    color: #ff4c4c;
+    border: 1px solid #ff4c4c;
+    box-shadow: 0 0 15px #ff4c4c33, 0 0 30px #ff4c4c22;
+}
+
+.jazmin-card .bio-avatar {
+    border: 2px solid #ff4c4c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff4c4c88;
+}
+
+.jazmin-card .moodboard h3 {
+    color: #ff4c4c;
+}
+
+.jazmin-card .board-img img {
+    border: 2px solid #ff4c4c55;
+    box-shadow: 0 0 8px #ff4c4c55;
+}
+
+.jazmin-card button {
+    background-color: transparent;
+    border: 1px solid #ff4c4c;
+    color: #ff4c4c;
+}
+
+.jazmin-card button:hover {
+    background-color: #ff4c4c22;
+}
+
+.jazmin-card .bio {
+    color: #dbb1b1;
+}
