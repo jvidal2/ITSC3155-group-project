@@ -166,6 +166,17 @@ button:hover {
     font-family: Arial, sans-serif;
 }
 
+.sara-card {
+    background: linear-gradient(135deg, #FFC0CB, #FFF0F5, #FFFFFF);
+    border: 2px solid #FFC0CB;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
 .sara-card h2 {
     color: #C71585;
 }
@@ -181,7 +192,23 @@ button:hover {
 }
 
 .sara-card button:hover {
-    background-color: #FF69B4;
+    background-color: #C71585;
+}
+
+.sara-card .bio-avatar {
+    border: 2px solid #FFC0CB;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #C71585;
+}
+
+.sara-card .moodboard h3 {
+    color: #C71585;
+}
+
+.sara-card .board-img img {
+    border: 2px solid #FFC0CB;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #C71585;
 }
 
 .dijonay-card{
@@ -196,7 +223,7 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px hsla(146, 86%, 11%, 0.689);
 }
-    
+
 .Trinity-card {
     background: #481F26;
     color: #BD6877;
