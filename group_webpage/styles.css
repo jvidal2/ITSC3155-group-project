@@ -154,3 +154,32 @@ button:hover {
 .jazmin-card .bio {
     color: #9f3d3d;
 }
+
+.sara-card {
+    background: linear-gradient(135deg, #FFC0CB, #FFF0F5, #FFFFFF);
+    border: 2px solid #FFC0CB;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.sara-card h2 {
+    color: #C71585;
+}
+
+.sara-card button {
+    background-color: #FFC0CB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sara-card button:hover {
+    background-color: #FF69B4;
+}
