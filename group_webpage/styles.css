@@ -155,7 +155,6 @@ button:hover {
     color: #9f3d3d;
 }
 
-<<<<<<< HEAD
 .sara-card {
     background: linear-gradient(135deg, #FFC0CB, #FFF0F5, #FFFFFF);
     border: 2px solid #FFC0CB;
@@ -184,7 +183,6 @@ button:hover {
 .sara-card button:hover {
     background-color: #FF69B4;
 }
-=======
 .dijonay-card{
     background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
     color: #0B6729;
@@ -262,4 +260,3 @@ button:hover {
 .alice-card .alice-board img {
     border: 2px solid #eae6da;
 }
->>>>>>> d4166f2fc28176ad0aa1d61cb099405315b56c8f
