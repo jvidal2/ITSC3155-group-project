@@ -8,7 +8,7 @@ body {
 
 /* Header section styling */
 header {
-    background: #333;
+    background: #9d79be;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -26,17 +26,17 @@ header nav {
 }
 
 header nav button {
-    background: #007BFF;
+    background-color: transparent;
     color: white;
-    border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin: 0 5px;
+    border: 2px solid #66408a;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: #66408a;
 }
 
 /* Flex container for team bios and vision sections */
