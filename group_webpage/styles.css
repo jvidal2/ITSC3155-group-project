@@ -154,3 +154,39 @@ button:hover {
 .jazmin-card .bio {
     color: #9f3d3d;
 }
+
+.Trinity-card {
+    background: #481F26;
+    color: #BD6877;
+    border: 1px solid #BD6877;
+    box-shadow: 0 2px 5px #BD6877, 0 2px 5px #BD6877;
+}
+
+.Trinity-card .bio-avatar {
+    border: 2px solid #BD6877;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #BD6877;
+}
+
+.Trinity-card .moodboard h3 {
+    color: #BD6877;
+}
+
+.Trinity-card .board-img img {
+    border: 2px solid #BD6877;
+    box-shadow: 0 2px 5px #BD6877;
+}
+
+.Trinity-card button {
+    background-color: transparent;
+    border: 1px solid #BD6877;
+    color: #BD6877;
+}
+
+.Trinity-card button:hover {
+    background-color: #BD6877;
+}
+
+.Trinity-card .bio {
+    color: #BD6877;
+}
