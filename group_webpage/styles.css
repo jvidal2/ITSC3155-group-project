@@ -203,3 +203,32 @@ button:hover {
 .Trinity-card .bio {
     color: #BD6877;
 }
+
+.alice-card {
+    background: #627466;
+    color: white;
+}
+
+.alice-card .bio-avatar {
+    border: 3px solid #eae6da;
+    border-radius: 8px;
+}
+
+.alice-card .bio {
+    color: white;
+}
+
+.alice-card button {
+    background-color: #eae6da;
+    color: #627466;
+}
+
+.alice-card button:hover {
+    background-color: #7A8F7F;
+    color: #eae6da;
+    border: 1px solid #eae6da;
+}
+
+.alice-card .alice-board img {
+    border: 2px solid #eae6da;
+}
