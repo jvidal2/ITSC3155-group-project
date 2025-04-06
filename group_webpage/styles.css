@@ -154,3 +154,16 @@ button:hover {
 .jazmin-card .bio {
     color: #9f3d3d;
 }
+
+.dijonay-card{
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+    color: #0B6729;
+    border: 1px solid #0B6729;
+    box-shadow: 0 0 15px hsla(146, 86%, 11%, 0.689), 0 0 30px hsla(146, 86%, 11%, 0.689);
+}
+
+.dijonay-card .bio-avatar {
+    border: 2px solid #0B6729;
+    border-radius: 8px;
+    box-shadow: 0 0 10px hsla(146, 86%, 11%, 0.689);
+}
