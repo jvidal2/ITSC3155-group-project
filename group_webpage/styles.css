@@ -183,6 +183,13 @@ button:hover {
 .sara-card button:hover {
     background-color: #FF69B4;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 837badda3782b5103859354eb921bf398e5511a6
+>>>>>>> 786dde82dd5d81546bc155a85a7de4f5f87a08d3
 .dijonay-card{
     background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
     color: #0B6729;
@@ -225,7 +232,7 @@ button:hover {
 }
 
 .Trinity-card button:hover {
-    background-color: #BD6877;
+    background-color: #CCB4B8;
 }
 
 .Trinity-card .bio {
@@ -249,12 +256,12 @@ button:hover {
 .alice-card button {
     background-color: #eae6da;
     color: #627466;
+    border: 1px solid #eae6da;
 }
 
 .alice-card button:hover {
     background-color: #7A8F7F;
     color: #eae6da;
-    border: 1px solid #eae6da;
 }
 
 .alice-card .alice-board img {
