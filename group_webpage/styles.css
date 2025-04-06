@@ -8,7 +8,7 @@ body {
 
 /* Header section styling */
 header {
-    background: #333;
+    background: #926fb3;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -26,17 +26,17 @@ header nav {
 }
 
 header nav button {
-    background: #007BFF;
+    background-color: transparent;
     color: white;
-    border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin: 0 5px;
+    border: 2px solid #66408a;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: #66408a;
 }
 
 /* Flex container for team bios and vision sections */
@@ -155,6 +155,38 @@ button:hover {
     color: #9f3d3d;
 }
 
+.sara-card {
+    background: linear-gradient(135deg, #FFC0CB, #FFF0F5, #FFFFFF);
+    border: 2px solid #FFC0CB;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.sara-card h2 {
+    color: #C71585;
+}
+
+.sara-card button {
+    background-color: #FFC0CB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sara-card button:hover {
+    background-color: #FF69B4;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 837badda3782b5103859354eb921bf398e5511a6
 .dijonay-card{
     background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
     color: #0B6729;
@@ -167,6 +199,72 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 0 10px hsla(146, 86%, 11%, 0.689);
 }
+    
+.Trinity-card {
+    background: #481F26;
+    color: #BD6877;
+    border: 1px solid #BD6877;
+    box-shadow: 0 2px 5px #BD6877, 0 2px 5px #BD6877;
+}
+
+.Trinity-card .bio-avatar {
+    border: 2px solid #BD6877;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #BD6877;
+}
+
+.Trinity-card .moodboard h3 {
+    color: #BD6877;
+}
+
+.Trinity-card .board-img img {
+    border: 2px solid #BD6877;
+    box-shadow: 0 2px 5px #BD6877;
+}
+
+.Trinity-card button {
+    background-color: transparent;
+    border: 1px solid #BD6877;
+    color: #BD6877;
+}
+
+.Trinity-card button:hover {
+    background-color: #CCB4B8;
+}
+
+.Trinity-card .bio {
+    color: #BD6877;
+}
+
+.alice-card {
+    background: #627466;
+    color: white;
+}
+
+.alice-card .bio-avatar {
+    border: 3px solid #eae6da;
+    border-radius: 8px;
+}
+
+.alice-card .bio {
+    color: white;
+}
+
+.alice-card button {
+    background-color: #eae6da;
+    color: #627466;
+    border: 1px solid #eae6da;
+}
+
+.alice-card button:hover {
+    background-color: #7A8F7F;
+    color: #eae6da;
+}
+
+.alice-card .alice-board img {
+    border: 2px solid #eae6da;
+}
+
 
 .dijonay-card .moodboard h3 {
     color: #0B6729;
