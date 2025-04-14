@@ -8,7 +8,6 @@ class Reviews(Base):
     __tablename__ = "reviews"
 
     customer_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    menu_item_id = Column(Integer, ForeignKey("menu_items.menu_item_id"))
     rating = Column(Integer, unique=True, nullable=True)
     review_text = Column(String(100), unique=True, nullable=True)
     image_included = Column(Boolean, unique=True, nullable=True)
