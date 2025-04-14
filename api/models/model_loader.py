@@ -11,3 +11,6 @@ def index():
     resources.Base.metadata.create_all(engine)
     payments.Base.metadata.create_all(engine)
     menu_item.Base.metadata.create_all(engine)
+    administration.Base.metadata.create_all(engine)
+    delivery.Base.metadata.create_all(engine)
+    third_party_delivery_service.Base.metadata.create_all(engine)
