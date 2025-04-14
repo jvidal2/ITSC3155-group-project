@@ -18,7 +18,7 @@ class UserUpdate(BaseModel):
 
 
 class User(UserBase):
-    id: int
+    user_id: int
 
     class ConfigDict:
         from_attributes = True
