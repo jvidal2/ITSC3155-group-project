@@ -1,5 +1,5 @@
-from . import orders, order_details, recipes, sandwiches, resources, payment, menu_item, administration, delivery, third_party_delivery_service, user, reviews
-from . import payments
+from . import orders, order_details, recipes, sandwiches, resources, payment, menu_item, administration, delivery, third_party_delivery_service, user, reviews, payment, staff
+
 from ..dependencies.database import engine
 
 
@@ -16,3 +16,4 @@ def index():
     third_party_delivery_service.Base.metadata.create_all(engine)
     user.Base.metadata.create_all(engine)
     reviews.Base.metadata.create_all(engine)
+    staff.Base.metadata.create_all(engine)
