@@ -288,3 +288,27 @@ button:hover {
 .alice-card .alice-board img {
     border: 2px solid #eae6da;
 }
+
+
+.dijonay-card .moodboard h3 {
+    color: #0B6729;
+}
+
+.dijonay-card .board-img img {
+    border: 2px solid hsla(146, 86%, 11%, 0.689);
+    box-shadow: 0 0 8px hsla(146, 86%, 11%, 0.689);
+}
+
+.dijonay-card button {
+    background-color: transparent;
+    border: 1px solid #0B6729;
+    color: #0B6729;
+}
+
+.dijonay-card button:hover {
+    background-color: hsla(146, 86%, 11%, 0.689);
+}
+
+.dijonay-card .bio {
+    color: #0B6729;
+}
