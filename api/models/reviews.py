@@ -4,13 +4,15 @@ from datetime import datetime
 from ..dependencies.database import Base
 
 
-class Reviews(Base):
+class Review(Base):
     __tablename__ = "reviews"
 
-    customer_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    rating = Column(Integer, unique=True, nullable=True)
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    customer_id = Column(Integer, ForeignKey("users.id"))
+    menu_item_id = Column(Integer, ForeignKey("menu_items.id"))
+    rating = Column(Integer, nullable=True)
     review_text = Column(String(100), nullable=True)
-    image_included = Column(Boolean, unique=True, nullable=True)
+    image_included = Column(Boolean, nullable=True)
 
     user = relationship("User", back_populates="reviews")
     menu_item = relationship("MenuItem", back_populates="reviews")
