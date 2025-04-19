@@ -23,5 +23,5 @@ class MenuItemUpdate(BaseModel):
 class MenuItem(MenuItemBase):
     itemID: int
 
-    class ConfigDict:
+    class Config:
         from_attributes = True

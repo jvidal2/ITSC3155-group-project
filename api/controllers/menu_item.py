@@ -68,3 +68,21 @@ def delete(db: Session, item_id: int):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+def search_menu_items(db: Session, q: str = "", exclude: str = ""):
+    try:
+        query = db.query(model.MenuItem)
+
+        #search by name
+        if q:
+            query = query.filter(model.MenuItem.name.ilike(f"%{q}%"))
+
+        #exclude unwanted ingredient from description
+        if exclude:
+            query = query.filter(~model.MenuItem.description.ilike(f"%{exclude}%"))
+
+        return query.all()
+
+    except SQLAlchemyError as e:
+        error = str(e.__dict__["orig"])
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
