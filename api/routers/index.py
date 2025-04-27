@@ -9,5 +9,8 @@ def load_routes(app):
     app.include_router(sandwiches.router)
     app.include_router(payment.router)
     app.include_router(third_party_delivery_service.router)
+    app.include_router(menu_item.router)
+    app.include_router(order_details.router)
+
 
 
