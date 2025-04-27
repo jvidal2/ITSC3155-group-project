@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, status, Response
 from sqlalchemy.orm import Session
-from ..controllers import payments as controller
-from ..schemas import payments as schema
+from ..controllers import payment as controller
+from ..schemas import payment as schema
 from ..dependencies.database import get_db
 
 router = APIRouter(
