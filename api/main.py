@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from .routers import index as indexRoute
 from .models import model_loader
 from .dependencies.config import conf
+from sqlalchemy.orm import Session
+from .dependencies.database import engine, get_db
 
 
 app = FastAPI()
@@ -25,4 +27,9 @@ indexRoute.load_routes(app)
 if __name__ == "__main__":
     uvicorn.run(app, host=conf.app_host, port=conf.app_port)
 
-
+@app.get("/third_party_delivery_service/{status}", response_model=model_loader.third_party_delivery_service, tags=["Delivery Status"])
+def read_delivery_status(status: str, db: Session = Depends(get_db)):
+    third_party_delivery_service = third_party_delivery_service.read_one(db, status=status)
+    if third_party_delivery_service is None:
+        raise HTTPException(status_code=404, detail="Delivery status not found")
+    return third_party_delivery_service
