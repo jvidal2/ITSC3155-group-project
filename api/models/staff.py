@@ -9,7 +9,7 @@ class Staff(Base):
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     name = Column(String(100), unique=True, nullable=False)
-    status = Column(String, nullable=False, server_default='inactive')
+    status = Column(String(50), nullable=False, server_default='inactive')
     order_id = Column(Integer, ForeignKey("order_details.id"))
 
     order_details = relationship("OrderDetail", back_populates="staff")

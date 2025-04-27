@@ -13,5 +13,5 @@ class Promotion(Base):
     end_date = Column(Date, nullable=True)
     active = Column(Boolean, nullable=False, default=True)
 
-    menu_item_id = Column(Integer, ForeignKey("menu_items.id"), nullable=True)
+    menu_item_id = Column(Integer, ForeignKey("menu_item.itemID"), nullable=True)
     menu_item = relationship("MenuItem", back_populates="promotions")
