@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response, Depends
 from ..models import third_party_delivery_service as model
+from ..schemas import third_party_delivery_service as schema
 from sqlalchemy.exc import SQLAlchemyError
 
 
@@ -19,7 +20,7 @@ def create(db: Session, request):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
 
-    return new_item
+    return schema.ThirdPartyDeliveryService.from_orm(new_item)
 
 
 def read_all(db: Session):
@@ -28,7 +29,7 @@ def read_all(db: Session):
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
-    return result
+    return [schema.ThirdPartyDeliveryService.from_orm(item) for item in result]
 
 
 def read_one(db: Session, item_id):
@@ -39,7 +40,7 @@ def read_one(db: Session, item_id):
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
-    return item
+    return schema.ThirdPartyDeliveryService.from_orm(item)
 
 
 def update(db: Session, item_id, request):
@@ -53,7 +54,9 @@ def update(db: Session, item_id, request):
     except SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
-    return item.first()
+
+    updated_item = item.first()
+    return schema.ThirdPartyDeliveryService.from_orm(updated_item)
 
 
 def delete(db: Session, item_id):
