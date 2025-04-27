@@ -28,7 +28,7 @@ if __name__ == "__main__":
     uvicorn.run(app, host=conf.app_host, port=conf.app_port)
 
 @app.get("/third_party_delivery_service/{status}", response_model=model_loader.third_party_delivery_service, tags=["Delivery Status"])
-def read_delivery_status(status: str, db: Session = Depends(get_db)):
+def read_one(status: str, db: Session = Depends(get_db)):
     service = model_loader.third_party_delivery_service.read_one(db, status=status)
     if service is None:
         raise HTTPException(status_code=404, detail="Delivery status not found")
