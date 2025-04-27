@@ -1,4 +1,4 @@
-from . import orders, order_details, administration, resources, sandwiches, payment, third_party_delivery_service, reviews, recipes, user, staff, delivery, menu_item, resources
+from . import orders, order_details, administration, resources, sandwiches, payment, third_party_delivery_service, reviews, recipes, user, staff, delivery, menu_item, resources, promotions
 
 
 def load_routes(app):
