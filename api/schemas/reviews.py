@@ -26,4 +26,4 @@ class Review(ReviewBase):
     created_at: datetime
 
     class ConfigDict:
-        from_attributes = True
+        orm_mode = True

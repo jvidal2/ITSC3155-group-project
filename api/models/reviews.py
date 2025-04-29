@@ -3,7 +3,6 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from ..dependencies.database import Base
 
-
 class Review(Base):
     __tablename__ = "reviews"
 
@@ -13,6 +12,7 @@ class Review(Base):
     rating = Column(Integer, nullable=True)
     review_text = Column(String(100), nullable=True)
     image_included = Column(Boolean, nullable=True)
+    created_at = Column(DATETIME, default=datetime.utcnow)
 
     user = relationship("User", back_populates="reviews")
     menu_item = relationship("MenuItem", back_populates="reviews")
