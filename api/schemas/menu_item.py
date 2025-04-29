@@ -7,6 +7,7 @@ class MenuItemBase(BaseModel):
     description: Optional[str] = None
     price: float
     rating: Optional[int] = None
+    available: Optional[bool] = True
 
 
 class MenuItemCreate(MenuItemBase):
@@ -18,7 +19,7 @@ class MenuItemUpdate(BaseModel):
     description: Optional[str] = None
     price: Optional[float] = None
     rating: Optional[int] = None
-
+    available: Optional[bool] = None
 
 class MenuItem(MenuItemBase):
     itemID: int

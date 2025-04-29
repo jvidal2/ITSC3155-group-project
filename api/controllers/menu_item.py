@@ -9,7 +9,7 @@ def create(db: Session, request):
         name=request.name,
         description=request.description,
         price=request.price,
-        available=request.available
+        available =request.available
     )
 
     try:
@@ -17,8 +17,8 @@ def create(db: Session, request):
         db.commit()
         db.refresh(new_item)
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
 
     return new_item
 
@@ -27,8 +27,8 @@ def read_all(db: Session):
     try:
         result = db.query(model.MenuItem).all()
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
     return result
 
 
@@ -38,8 +38,8 @@ def read_one(db: Session, item_id: int):
         if not item:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Id not found!")
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
     return item
 
 
@@ -52,8 +52,8 @@ def update(db: Session, item_id: int, request):
         item.update(update_data, synchronize_session=False)
         db.commit()
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
     return item.first()
 
 
@@ -65,8 +65,8 @@ def delete(db: Session, item_id: int):
         item.delete(synchronize_session=False)
         db.commit()
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 def search_menu_items(db: Session, q: str = "", exclude: str = ""):
@@ -82,7 +82,6 @@ def search_menu_items(db: Session, q: str = "", exclude: str = ""):
             query = query.filter(~model.MenuItem.description.ilike(f"%{exclude}%"))
 
         return query.all()
-
     except SQLAlchemyError as e:
-        error = str(e.__dict__["orig"])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
