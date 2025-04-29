@@ -20,16 +20,16 @@ def create(db: Session, request: schema.ReviewCreate):
         db.refresh(new_review)
         return new_review
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
 
 
 def read_all(db: Session):
     try:
         return db.query(model.Review).all()
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
 
 
 def read_one(db: Session, item_id: int):
@@ -39,8 +39,8 @@ def read_one(db: Session, item_id: int):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Review not found")
         return review
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
 
 
 def update(db: Session, item_id: int, request: schema.ReviewUpdate):
@@ -52,8 +52,8 @@ def update(db: Session, item_id: int, request: schema.ReviewUpdate):
         db.commit()
         return review.first()
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)
 
 
 def delete(db: Session, item_id: int):
@@ -65,5 +65,5 @@ def delete(db: Session, item_id: int):
         db.commit()
         return Response(status_code=status.HTTP_204_NO_CONTENT)
     except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+        error = str(getattr(e, "orig", e))
+        raise HTTPException(status_code=500, detail=error)

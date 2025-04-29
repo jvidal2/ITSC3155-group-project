@@ -12,4 +12,4 @@ class User(Base):
     email = Column(String(100), unique=True, nullable=True)
     phone_number = Column(Integer, unique=True, nullable=True)
 
-    reviews = relationship("Reviews", back_populates="user")
+    reviews = relationship("Review", back_populates="user")
