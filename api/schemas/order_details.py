@@ -9,7 +9,6 @@ class OrderDetailBase(BaseModel):
 
 
 class OrderDetailCreate(OrderDetailBase):
-    order_id: int
     menu_item_id: int
 
 class OrderDetailUpdate(BaseModel):
