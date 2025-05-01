@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, String, DECIMAL, Boolean
 from sqlalchemy.orm import relationship
-
 from ..dependencies.database import Base
 
 
@@ -16,3 +15,5 @@ class MenuItem(Base):
 
     reviews = relationship("Review", back_populates="menu_item")
     promotions = relationship("Promotion", back_populates="menu_item")
+    recipes = relationship("Recipe", back_populates="menu_item")
+    order_details = relationship("OrderDetail", back_populates="menu_item")

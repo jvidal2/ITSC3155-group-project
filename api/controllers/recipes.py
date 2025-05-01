@@ -7,7 +7,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 def create(db: Session, request: schema.RecipeCreate):
     new_recipe = model.Recipe(
-        sandwich_id=request.sandwich_id,
+        menu_item_id= request.menu_item_id,
         resource_id=request.resource_id,
         amount=request.amount
     )

@@ -19,6 +19,10 @@ def create(request: schema.MenuItemCreate, db: Session = Depends(get_db)):
 def read_all(db: Session = Depends(get_db)):
     return controller.read_all(db)
 
+#search and filter
+@router.get("/search", response_model=list[schema.MenuItem])
+def search_menu_items(q: str = "", exclude: str = "", db: Session = Depends(get_db)):
+    return controller.search_menu_items(db=db, q=q, exclude=exclude)
 
 @router.get("/{item_id}", response_model=schema.MenuItem)
 def read_one(item_id: int, db: Session = Depends(get_db)):
@@ -33,9 +37,3 @@ def update(item_id: int, request: schema.MenuItemUpdate, db: Session = Depends(g
 @router.delete("/{item_id}")
 def delete(item_id: int, db: Session = Depends(get_db)):
     return controller.delete(db=db, item_id=item_id)
-
-
-#search and filter
-@router.get("/search", response_model=list[schema.MenuItem])
-def search_menu_items(q: str = "", exclude: str = "", db: Session = Depends(get_db)):
-    return controller.search_menu_items(db=db, q=q, exclude=exclude)
