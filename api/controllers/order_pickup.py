@@ -7,7 +7,8 @@ from sqlalchemy.exc import SQLAlchemyError
 def create(db: Session, request):
     new_item = model.OrderPickup(
         name=request.name,
-        address=request.address
+        order_id=request.order_id,
+        payment_id=request.payment_id
     )
 
     try:
