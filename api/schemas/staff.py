@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 class StaffBase(BaseModel):
     name: Optional[str] = None
-    status: str = "0.0" 
+    status: str
     order_id: int
 
 class StaffCreate(StaffBase):
