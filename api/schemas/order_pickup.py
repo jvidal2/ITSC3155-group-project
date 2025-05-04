@@ -4,7 +4,10 @@ from typing import Optional
 
 class OrderPickupBase(BaseModel):
     name: str
-    address: str
+    order_id: int
+    description: str
+    amount: int
+    payment_method: str
 
 
 class OrderPickupCreate(OrderPickupBase):
@@ -13,11 +16,11 @@ class OrderPickupCreate(OrderPickupBase):
 
 class OrderPickupUpdate(BaseModel):
     name: Optional[str] = None
-    address: Optional[str] = None
+    payment_method: Optional[str] = None
 
 
 class OrderPickup(OrderPickupBase):
     id: int
 
-    class ConfigDict:
+    class Config:
         from_attributes = True
