@@ -1,5 +1,5 @@
-from . import (orders, order_details, recipes, resources, payment, menu_item,
-               administration, delivery, third_party_delivery_service, user,
+from . import (order_pickup, orders, order_details, recipes, resources, payment, menu_item,
+               administration, third_party_delivery_service, user,
                reviews, payment, staff)
 
 from ..dependencies.database import engine
@@ -13,8 +13,9 @@ def index():
     payment.Base.metadata.create_all(bind=engine, checkfirst=True)
     menu_item.Base.metadata.create_all(bind=engine, checkfirst=True)
     administration.Base.metadata.create_all(bind=engine, checkfirst=True)
-    delivery.Base.metadata.create_all(bind=engine, checkfirst=True)
+    order_pickup.Base.metadata.create_all(bind=engine, checkfirst=True)
     third_party_delivery_service.Base.metadata.create_all(bind=engine, checkfirst=True)
     user.Base.metadata.create_all(bind=engine, checkfirst=True)
     reviews.Base.metadata.create_all(bind=engine, checkfirst=True)
     staff.Base.metadata.create_all(bind=engine, checkfirst=True)
+    order_pickup.Base.metadata.create_all(bind=engine, checkfirst=True)
