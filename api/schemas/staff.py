@@ -2,9 +2,9 @@ from typing import Optional
 from pydantic import BaseModel
 
 class StaffBase(BaseModel):
-    name: Optional[str] = None
-    status: str = "0.0" 
-    order_id: int
+    name: str
+    status: str
+    order_id: Optional[int] = None
 
 class StaffCreate(StaffBase):
     pass
