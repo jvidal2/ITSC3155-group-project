@@ -6,7 +6,6 @@ from sqlalchemy.exc import SQLAlchemyError
 
 def create(db: Session, request):
     new_item = model.OrderPickup(
-        id=request.id,
         name=request.name,
         address=request.address
     )
