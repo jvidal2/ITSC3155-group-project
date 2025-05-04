@@ -1,5 +1,5 @@
 from . import (orders, order_details, administration, resources, payment,
-               third_party_delivery_service, reviews, recipes, user, staff, delivery,
+               third_party_delivery_service, reviews, recipes, user, staff,
                menu_item, promotions)
 
 
@@ -14,7 +14,6 @@ def load_routes(app):
     app.include_router(recipes.router)
     app.include_router(user.router)
     app.include_router(staff.router)
-    app.include_router(delivery.router)
     app.include_router(menu_item.router)
     app.include_router(promotions.router)
 
