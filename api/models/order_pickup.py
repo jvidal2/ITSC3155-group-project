@@ -3,8 +3,8 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from ..dependencies.database import Base
 
-class Delivery(Base):
-    __tablename__ = "delivery"
+class OrderPickup(Base):
+    __tablename__ = "order_pickup"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     name = Column(String(100), nullable=False)
