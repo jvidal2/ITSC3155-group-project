@@ -10,12 +10,13 @@ class OrderDetailBase(BaseModel):
 
 class OrderDetailCreate(OrderDetailBase):
     menu_item_id: int
+    order_id: int
 
 class OrderDetailUpdate(BaseModel):
     order_id: Optional[int] = None
     menu_item_id: Optional[int] = None
     amount: Optional[int] = None
-
+    third_party_delivery_service_id: Optional[int] = None
 
 class OrderDetail(OrderDetailBase):
     id: int

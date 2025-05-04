@@ -10,3 +10,5 @@ class ThirdPartyDeliveryService(Base):
     name = Column(String(100), nullable=False)
     amount = Column(DECIMAL(6, 2), nullable=False, default='0.00')
     status = Column(String(50), nullable=False)
+
+    order_details = relationship("OrderDetail", back_populates="third_party_delivery_service")
