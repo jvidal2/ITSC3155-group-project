@@ -11,7 +11,9 @@ class Payment(Base):
     method = Column(String(50), nullable=False)
     status = Column(String(50), nullable=False)
     promo_code = Column(String(50), nullable=True)
-    promo_applied = Column(Boolean, nullable=False, default=False)
 
     order_id = Column(Integer, ForeignKey("orders.id"), nullable=False)
     order = relationship("Order", back_populates="payment")
+
+    promotion_id = Column(Integer, ForeignKey("promotions.id"), nullable=True)
+    promotion = relationship("Promotion", back_populates="payments")
