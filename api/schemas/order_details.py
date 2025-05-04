@@ -10,7 +10,6 @@ class OrderDetailBase(BaseModel):
 
 class OrderDetailCreate(OrderDetailBase):
     menu_item_id: int
-    order_id: int
 
 class OrderDetailUpdate(BaseModel):
     order_id: Optional[int] = None
