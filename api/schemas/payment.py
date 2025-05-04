@@ -8,12 +8,11 @@ class PaymentBase(BaseModel):
     method: str
     status: str
     promo_code: Optional[str] = None
-    promo_applied: bool = False
-    order_id: int
+    promotion_id: Optional[int] = None
 
 
 class PaymentCreate(PaymentBase):
-    pass
+    order_id: int
 
 
 class PaymentUpdate(BaseModel):
@@ -21,11 +20,12 @@ class PaymentUpdate(BaseModel):
     method: Optional[str] = None
     status: Optional[str] = None
     promo_code: Optional[str] = None
-    promo_applied: Optional[bool] = None
+    promotion_id: Optional[int] = None
 
 
 class Payment(PaymentBase):
     paymentID: int
+    order_id: int
     
     class ConfigDict:
         from_attributes = True
