@@ -19,5 +19,5 @@ class OrderPickupUpdate(BaseModel):
 class OrderPickup(OrderPickupBase):
     id: int
 
-    class Config:
+    class ConfigDict:
         from_attributes = True

@@ -13,5 +13,5 @@ class OrderTrackingUpdate(BaseModel):
 class OrderTracking(OrderTrackingBase):
     order_id: int
 
-    class Config:
+    class ConfigDict:
         from_attributes = True

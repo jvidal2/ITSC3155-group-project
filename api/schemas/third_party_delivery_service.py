@@ -21,5 +21,5 @@ class ThirdPartyDeliveryServiceUpdate(BaseModel):
 class ThirdPartyDeliveryService(ThirdPartyDeliveryServiceBase):
     id: int
 
-    class Config:
+    class ConfigDict:
         from_attributes = True

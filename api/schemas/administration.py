@@ -18,5 +18,5 @@ class AdministrationUpdate(BaseModel):
 class Administration(AdministrationBase):
     admin_ID: int
 
-    class Config:
+    class ConfigDict:
         from_attributes = True
