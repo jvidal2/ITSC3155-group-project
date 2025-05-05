@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from ..models import OrderTracking
+from ..models.order_tracking import OrderTracking
 from ..schemas import order_tracking as schema
 
 def read_all(db: Session):
