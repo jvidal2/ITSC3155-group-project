@@ -24,29 +24,26 @@ Search and filter menu items by name or exclude ingredients. Clear relationships
 
 
 ### Setup Instructions
-#### Clone the repository
-	
-git clone https://github.com/jvidal2/ITSC3155-group-project
-cd FinalProject
+#### Clone the repository	
+* git clone https://github.com/jvidal2/ITSC3155-group-project
+* cd FinalProject
 
 
 #### Create a virtual environment
-
-python -m venv .venv
-source .venv/bin/activate      (Linux/macOS)
-.venv\Scripts\activate            (Windows)
+* python -m venv .venv
+* source .venv/bin/activate      (Linux/macOS)
+* .venv\Scripts\activate            (Windows)
 
 
 #### Install dependencies
+* pip install -r requirements.txt
 
-pip install -r requirements.txt
 
+#### Set up MySQL database
+* Create the sandwich_maker_api database
+* Let SQLAlchemy create the tables
 
-Set up MySQL database
-Create the sandwich_maker_api database
-Let SQLAlchemy create the tables
-Run the FastAPI server
-
+#### Run the FastAPI server
 uvicorn api.main:app –reload
 
 
