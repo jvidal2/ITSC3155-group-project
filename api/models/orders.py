@@ -13,3 +13,4 @@ class Order(Base):
 
     order_details = relationship("OrderDetail", back_populates="order")
     payment = relationship("Payment", back_populates="order")
+    tracking = relationship("OrderTracking", back_populates="order", uselist=False)
