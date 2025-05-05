@@ -1,6 +1,6 @@
 from . import (order_pickup, orders, order_details, recipes, resources, payment, menu_item,
                administration, third_party_delivery_service, user,
-               reviews, payment, staff)
+               reviews, payment, staff, order_tracking)
 
 from ..dependencies.database import engine
 
@@ -19,3 +19,4 @@ def index():
     reviews.Base.metadata.create_all(bind=engine, checkfirst=True)
     staff.Base.metadata.create_all(bind=engine, checkfirst=True)
     order_pickup.Base.metadata.create_all(bind=engine, checkfirst=True)
+    order_tracking.Base.metadata.create_all(bind=engine, checkfirst=True)
