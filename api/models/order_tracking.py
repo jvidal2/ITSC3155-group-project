@@ -12,5 +12,3 @@ class OrderTracking(Base):
     last_updated = Column(DateTime, nullable=False, default=datetime.now())
     
     order = relationship("Order", back_populates="tracking")
-    staff_id = Column(Integer, ForeignKey("staff.id"), nullable=True)
-    staff = relationship("Staff", back_populates="tracked_orders")
