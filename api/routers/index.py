@@ -1,6 +1,6 @@
 from . import (orders, order_details, administration, resources, payment,
                third_party_delivery_service, reviews, recipes, user, staff,
-               menu_item, promotions, order_pickup)
+               menu_item, promotions, order_pickup, order_tracking)
 
 
 def load_routes(app):
@@ -9,6 +9,7 @@ def load_routes(app):
     app.include_router(orders.router)
     app.include_router(order_details.router)
     app.include_router(order_pickup.router)
+    app.include_router(order_tracking.router)
     app.include_router(promotions.router)
     app.include_router(payment.router)
     app.include_router(reviews.router)
