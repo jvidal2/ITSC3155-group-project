@@ -5,7 +5,7 @@ class OrderTrackingBase(BaseModel):
     status: str
 
 class OrderTrackingCreate(OrderTrackingBase):
-    pass
+    order_id: int
 
 class OrderTrackingUpdate(BaseModel):
     status: Optional[str] = None
