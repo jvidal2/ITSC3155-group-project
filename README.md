@@ -2,7 +2,7 @@
 
 This is the Final Project for ITSC3155, a backend API for managing a sandwich making system. It handles menu items, recipes, resources, orders, payments, promotions, users, reviews, staff, delivery, and more using FastAPI and SQLAlchemy with a MySQL database.
 
-#### Features
+### Features
 ##### CRUD operations for:
 * Menu Items
 * Recipes linking menu items to resources
@@ -15,30 +15,29 @@ This is the Final Project for ITSC3155, a backend API for managing a sandwich ma
 
 Search and filter menu items by name or exclude ingredients. Clear relationships using SQLAlchemy with foreign key integrity. Modular structure with routers, controllers, models, and schemas. Swagger documentation available at /docs. Error handling with descriptive API responses.
 
-#### Technologies Used
+### Technologies Used
 * `Python 3.11+`
 * `FastAPI`
 * `SQLAlchemy`
 * `MySQL`
 * `Pydantic`
 
-#### Optional:
 
-#### Setup Instructions
-##### Clone the repository
+### Setup Instructions
+#### Clone the repository
 	
 git clone https://github.com/jvidal2/ITSC3155-group-project
 cd FinalProject
 
 
-##### Create a virtual environment
+#### Create a virtual environment
 
 python -m venv .venv
 source .venv/bin/activate      (Linux/macOS)
 .venv\Scripts\activate            (Windows)
 
 
-##### Install dependencies
+#### Install dependencies
 
 pip install -r requirements.txt
 
@@ -51,10 +50,10 @@ Run the FastAPI server
 uvicorn api.main:app –reload
 
 
-#### Access API docs
+### Access API docs
 Open http://127.0.0.1:8000/docs to explore and test the endpoints
 
-#### Contributors
+### Contributors
 * Jazmin Vidal
 * Alice Chen
 * Dijonay Dawson
