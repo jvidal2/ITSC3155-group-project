@@ -49,7 +49,7 @@ This is the Final Project for ITSC3155, a backend API for managing a sandwich ma
 * Let SQLAlchemy create the tables
 
 #### Run the FastAPI server
-* uvicorn api.main:app –reload
+* uvicorn api.main:app --reload
 
 
 ### Access API docs
