@@ -31,7 +31,7 @@ This is the Final Project for ITSC3155, a backend API for managing a sandwich ma
 ### Setup Instructions
 #### Clone the repository	
 * git clone https://github.com/jvidal2/ITSC3155-group-project
-* cd FinalProject
+* cd ITSC3155-group-project
 
 
 #### Create a virtual environment
