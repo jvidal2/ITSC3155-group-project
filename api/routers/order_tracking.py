@@ -30,3 +30,7 @@ def read_one(order_id: int, db: Session = Depends(get_db)):
 @router.put("/{order_id}", response_model=schema.OrderTracking)
 def update(order_id: int, request: schema.OrderTrackingUpdate, db: Session = Depends(get_db)):
     return controller.update(db=db, request=request, order_id=order_id)
+
+@router.delete("/{order_id}")
+def delete(order_id: int, db: Session = Depends(get_db)):
+    return controller.delete(db=db, order_id=order_id)
