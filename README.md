@@ -45,7 +45,7 @@ This is the Final Project for ITSC3155, a backend API for managing a sandwich ma
 
 
 #### Set up MySQL database
-* Create the sandwich_maker_api database
+* Create the restaurant_ordering_system database
 * Let SQLAlchemy create the tables
 
 #### Run the FastAPI server
