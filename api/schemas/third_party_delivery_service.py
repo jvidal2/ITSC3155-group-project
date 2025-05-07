@@ -5,6 +5,7 @@ from typing import Optional
 class ThirdPartyDeliveryServiceBase(BaseModel):
     name: str
     amount: float
+    address: str
     status: str
 
 
